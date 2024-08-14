@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden; /* Prevents scrollbars from appearing during the animation */
+}
+
+
+#single-hello {
+    position: absolute;
+    font-size: 30rem;
+    animation: moveRightToLeft 5s linear infinite;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the far right of the viewport */
+    }
+}
+
